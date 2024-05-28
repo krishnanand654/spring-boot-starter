@@ -43,7 +43,7 @@ public class UserController {
 		return result;
 	}
 	
-	@PutMapping("/user/update")
+	@PutMapping("/user/update/{id}")
 	public ResponseEntity<User> updateUserById(@RequestBody User user) {
 		User result = userService.updateUserById(user);
 		if(result == null) {
